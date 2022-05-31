@@ -116,3 +116,14 @@ docker-compose kill
 docker-compose build
 docker-compose up
 ```
+
+
+Video of a triangular arbitrage bot processing realtime price data via websocket directly from the Binance exchange.  For each crypto currency on the exchange, it pairs it with another coin, plus two other coin pairs, and looks for arbitrage opportunities between them.
+
+Since this is intra-exchange rather than exchange to exchange, there will be no withdrawal fees, no long confirmation waits, and no need to have assets trade ready in other exchanges where they largely sit idle waiting for arbitrage opportunities.  Next is to realize these opportunities, which is a serious challenge because I suspect the network latency combined with the slow trading engine at the exchange simply isn't fast enough.
+
+Now I understand why high- frequency traders require colocation next to the exchange and pay  millions in subscription fees to drop fiber on the exchange's switch.  
+
+These trading opportunities only exist for milliseconds, but have great potential.  Consider this, the video is 56 seconds long, the trade data refreshes at 1 second intervals, and there are 51 valid opportunities on display.  The first 5 seconds are thrown out because it is spent on launching the bot. 
+
+Out of the 51 opportunities there are 7 that are below a 1% profit margin, so we'll exclude them.  This leaves 44 trading opportunities that have a profit margin between 3.78% and 1.0%.  Let say the average profit margin is 1.75%, we capture 100% of the 44 opportunities, and we have $1,000 as the initial investment.  What is the take?
